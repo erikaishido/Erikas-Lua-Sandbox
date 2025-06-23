@@ -4,7 +4,7 @@ local idleState = {}
 
 function idleState.keyPressed(key)
     if key == "space" then
-        stateStack.push(dialogueState)
+        --stateStack.push(dialogueState)
     elseif key == "m" then
         stateStack.push(menuState)
     end

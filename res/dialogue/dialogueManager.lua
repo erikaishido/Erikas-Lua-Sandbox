@@ -49,7 +49,7 @@ function dialogueManager.next()
 end
 
 function endDialogue()
-    dialogueState.exit()
+    --dialogueState.exit()
 end
 
 -------------------------------------------------------------
