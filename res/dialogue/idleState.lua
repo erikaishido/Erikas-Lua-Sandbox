@@ -14,6 +14,8 @@ function idleState.update(dt)
 end
 
 function idleState.draw()
+    home.draw()
+    menu.draw()
 end
 
 ---------------------------------------------------------------

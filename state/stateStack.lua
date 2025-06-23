@@ -2,8 +2,7 @@ local stateStack = {}
 
 -- states (global!!!!!?????? fucked up man)
 -- each "state" is just a group of functions w/ identical names
-idleState = require("state/idleState")
-dialogueState = require("state/dialogueState")
+homeState = require("state/homeState")
 menuState = require("state/menuState")
 
 -- ye olde stack

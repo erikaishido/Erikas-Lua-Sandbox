@@ -13,7 +13,7 @@ function menuState.update(dt)
 end
 
 function menuState.draw()
-    menu.draw()
+    --menu.draw()
 end
 
 ---------------------------------------------------------------

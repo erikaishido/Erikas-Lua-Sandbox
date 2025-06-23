@@ -1,9 +1,9 @@
 -- initializing private modules
 
 -- global modules
-dialogueManager = require("dialogue/dialogueManager")
 stateStack = require("state/stateStack")
 menu = require("menu/menu")
+home = require("home")
 
 ----------------------loading the bad boy up--------------------------
 
@@ -11,7 +11,7 @@ function love.load()
     elapsedTime = 0
     love.graphics.setDefaultFilter("nearest", "nearest")
 
-    stateStack.push(idleState)
+    stateStack.push(homeState)
 end
 
 -----------------------------game loop--------------------------------
