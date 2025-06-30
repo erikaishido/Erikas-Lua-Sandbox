@@ -3,7 +3,7 @@ local menuState = {}
 -------------------------game loop-----------------------------
 
 function menuState.keyPressed(key)
-    if key == "m" then
+    if key == "m" or key == "backspace" then
         menuState.exit()
     elseif key == "w" or key == "s" then
         menu.move(key)

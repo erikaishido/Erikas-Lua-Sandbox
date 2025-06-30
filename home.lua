@@ -15,7 +15,6 @@ function home.draw()
     end
 
     player.draw()
-    dressup.draw()
 end
 
 ---------------------------------------------------------------

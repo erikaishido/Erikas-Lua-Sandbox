@@ -10,10 +10,10 @@ local subMargin = 20
 
 local menuIndex = 1
 local subMenus = {
-    "dressup",
-    "interior",
-    "screenshot",
-    "config"
+    {"dressup", dressupState},
+    {"interior", 0},
+    {"screenshot", 0},
+    {"config", 0}
 }
 
 local debug = "menu debug message"
@@ -26,14 +26,13 @@ function menu.draw()
     end
 
     love.graphics.rectangle("line", xorigin, yorigin, 200, 250)
-
     love.graphics.print(debug, xorigin+20, yorigin-30)
 
     for i=1, #subMenus do
         if i == menuIndex and stateStack.top() == menuState then
-            love.graphics.print("> "..subMenus[i], subx, suby + (i * subMargin))
+            love.graphics.print("> "..subMenus[i][1], subx, suby + (i * subMargin))
         else
-            love.graphics.print(subMenus[i], subx, suby + (i * subMargin))
+            love.graphics.print(subMenus[i][1], subx, suby + (i * subMargin))
         end
     end
 
@@ -42,34 +41,18 @@ end
 ---------------------input processing------------------------
 
 function menu.move(key)
-    if isValidDir(key) == false then
+    if util.isValidDir(key, menuIndex, subMenus) == false then
         return
     end
-    menuIndex = menuIndex + keyToDir(key)
+    menuIndex = menuIndex + util.keyToDir(key)
     debug = tostring(menuIndex)
 end
 
 function menu.select()
-end
-
---------------------------utilities--------------------------
-
-function keyToDir(key)
-    assert(key == "w" or key == "s", "why are you reading this key")
-    if key == "w" then
-        return -1
-    elseif key == "s" then
-        return 1
+    if subMenus[menuIndex] == 0 then
+        return
     end
-end
-
-function isValidDir(key)
-    if menuIndex + keyToDir(key) <= 0 then
-        return false
-    elseif menuIndex + keyToDir(key) > #subMenus then
-        return false
-    end
-    return true
+    stateStack.push(subMenus[menuIndex][2])
 end
 
 return menu

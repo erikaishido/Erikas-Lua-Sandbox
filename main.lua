@@ -7,6 +7,7 @@ home = require("home")
 textureAtlas = require("textureAtlas")
 player = require("player")
 dressup = require("dressup")
+util = require("util")
 
 ----------------------loading the bad boy up--------------------------
 
