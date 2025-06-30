@@ -25,7 +25,7 @@ function stateStack.draw()
     for i=1, #stack do
         stack[i].draw()
     end
-    love.graphics.print(getEntireStack(), 20, 500)
+    love.graphics.print(getEntireStack(), 5, 130)
 end
 
 ------------------------stack manipulation----------------------------
@@ -49,7 +49,7 @@ function getEntireStack()
     stackForPrint = ""
     for i=1, #stack do
         thisStack = stack[i].getName()
-        stackForPrint = stackForPrint .. " / " .. thisStack
+        stackForPrint = stackForPrint .. " /" .. thisStack
     end
     return stackForPrint
 end

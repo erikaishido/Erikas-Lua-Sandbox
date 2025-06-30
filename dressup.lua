@@ -6,8 +6,8 @@ local dressIndex = 1
 
 -- for display
 local xorigin = 140
-local yorigin = 200
-local yoffset = 60
+local yorigin = 20
+local yoffset = 30
 
 function dressup.load()
     dressup.atlas = love.graphics.newImage("res/png/test2.png")
@@ -24,9 +24,9 @@ function dressup.draw()
     love.graphics.setColor(255,255,255)
     for i=1, #allDresses do
         local quad = allDresses[i]
-        love.graphics.draw(dressup.atlas, quad, xorigin, (yorigin + (i-1)*yoffset), 0, 2)
+        love.graphics.draw(dressup.atlas, quad, xorigin, (yorigin + (i-1)*yoffset))
         if i == dressIndex then
-            love.graphics.rectangle("line", xorigin-4, (yorigin + 13 + (i-1)*yoffset), 60, 60)
+            love.graphics.rectangle("line", xorigin-2, (yorigin+6 + (i-1)*yoffset), 31, 29)
         end
     end
     player.draw()

@@ -9,9 +9,9 @@ function home.update(dt)
 end
 
 function home.draw()
-    love.graphics.rectangle("line", 40, 40, 480, 300)
+    love.graphics.rectangle("line", 10, 10, 160, 110)
     if stateStack.top() == homeState then
-        love.graphics.rectangle("line", 30, 30, 500, 320)
+        love.graphics.rectangle("line", 5, 5, 170, 120)
     end
 
     player.draw()

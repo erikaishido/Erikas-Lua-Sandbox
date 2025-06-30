@@ -8,7 +8,8 @@ end
 -----------------------------game loop--------------------------------
 
 function player.draw()
-    love.graphics.draw(player.atlas, player.quad, 280, 200, 0, 2)
+    love.graphics.draw(player.atlas, player.quad, 60, 60)
+    --love.graphics.draw(player.atlas, player.quad, 280, 200, 0, 2)
     --love.graphics.print(tostring(player.quad), 20, 370)
 end
 
