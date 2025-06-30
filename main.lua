@@ -12,6 +12,8 @@ function love.load()
     love.graphics.setDefaultFilter("nearest", "nearest")
 
     stateStack.push(homeState)
+
+    home.load()
 end
 
 -----------------------------game loop--------------------------------

@@ -5,6 +5,10 @@ local menuState = {}
 function menuState.keyPressed(key)
     if key == "m" then
         menuState.exit()
+    elseif key == "w" or key == "s" then
+        menu.move(key)
+    elseif key == "space" then
+        menu.select()
     end
 end
 

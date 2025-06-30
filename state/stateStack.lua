@@ -4,6 +4,7 @@ local stateStack = {}
 -- each "state" is just a group of functions w/ identical names
 homeState = require("state/homeState")
 menuState = require("state/menuState")
+dressupState = require("state/dressupState")
 
 -- ye olde stack
 local stack = {}
