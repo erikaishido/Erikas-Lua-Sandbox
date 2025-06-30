@@ -2,7 +2,7 @@
 
 -- global modules
 stateStack = require("state/stateStack")
-menu = require("menu/menu")
+menu = require("menu")
 home = require("home")
 
 ----------------------loading the bad boy up--------------------------
