@@ -4,6 +4,9 @@
 stateStack = require("state/stateStack")
 menu = require("menu")
 home = require("home")
+textureAtlas = require("textureAtlas")
+player = require("player")
+dressup = require("dressup")
 
 ----------------------loading the bad boy up--------------------------
 
@@ -12,8 +15,8 @@ function love.load()
     love.graphics.setDefaultFilter("nearest", "nearest")
 
     stateStack.push(homeState)
-
-    home.load()
+    player.load()
+    dressup.load()
 end
 
 -----------------------------game loop--------------------------------
